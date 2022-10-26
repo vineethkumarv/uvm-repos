@@ -1,13 +1,13 @@
 # vsim one -c -do "run;exit;" 
-# Start time: 07:19:48 on Oct 26,2022
+# Start time: 01:04:45 on Oct 27,2022
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: packp.sv(35): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
-# ** Warning: packp.sv(36): (vopt-2240) Treating stand-alone use of function 'pack_ints' as an implicit VOID cast.
-# ** Warning: packp.sv(37): (vopt-2240) Treating stand-alone use of function 'pack' as an implicit VOID cast.
-# ** Warning: packp.sv(38): (vopt-2240) Treating stand-alone use of function 'pack_bytes' as an implicit VOID cast.
-# ** Warning: packp.sv(46): (vopt-2240) Treating stand-alone use of function 'unpack_ints' as an implicit VOID cast.
-# ** Warning: packp.sv(48): (vopt-2240) Treating stand-alone use of function 'unpack' as an implicit VOID cast.
-# ** Warning: packp.sv(50): (vopt-2240) Treating stand-alone use of function 'unpack_bytes' as an implicit VOID cast.
+# ** Warning: goex.sv(35): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: goex.sv(37): (vopt-2240) Treating stand-alone use of function 'pack' as an implicit VOID cast.
+# ** Warning: goex.sv(39): (vopt-2240) Treating stand-alone use of function 'pack_bytes' as an implicit VOID cast.
+# ** Warning: goex.sv(40): (vopt-2240) Treating stand-alone use of function 'pack_ints' as an implicit VOID cast.
+# ** Warning: goex.sv(45): (vopt-2240) Treating stand-alone use of function 'unpack' as an implicit VOID cast.
+# ** Warning: goex.sv(46): (vopt-2240) Treating stand-alone use of function 'unpack_bytes' as an implicit VOID cast.
+# ** Warning: goex.sv(47): (vopt-2240) Treating stand-alone use of function 'unpack_ints' as an implicit VOID cast.
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
 # //
@@ -24,7 +24,7 @@
 # //
 # Loading sv_std.std
 # Loading mtiUvm.uvm_pkg
-# Loading work.packp_sv_unit(fast)
+# Loading work.goex_sv_unit(fast)
 # Loading work.one(fast)
 # Loading mtiUvm.questa_uvm_pkg(fast)
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
@@ -52,15 +52,27 @@
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
 # UVM_INFO @ 0: reporter [RNTST] Running test test...
-# UVM_INFO packp.sv(40) @ 0: uvm_test_top [uvm_test_top] pack bitdata='{1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0}
-# UVM_INFO packp.sv(41) @ 0: uvm_test_top [uvm_test_top] pack intdata='{4097588696, 1790967808}
-# UVM_INFO packp.sv(42) @ 0: uvm_test_top [uvm_test_top] pack bytedata='{244, 60, 61, 216, 106, 192}
-# size is intdata is 2 and value is -197378600
-# size is bitdata is 43 and values are 3
-# size is bytedata is 6 and value is 86
-# UVM_INFO packp.sv(47) @ 0: uvm_test_top [uvm_test_top] unpack intdata='{4097588696, 1790967808}
-# UVM_INFO packp.sv(49) @ 0: uvm_test_top [uvm_test_top] unpack bitdata='{1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0}
-# UVM_INFO packp.sv(51) @ 0: uvm_test_top [uvm_test_top] unpack bytedata='{244, 60, 61, 216, 106, 192}
+# -----------------------------------------
+# Name       Type          Size  Value     
+# -----------------------------------------
+# my_object  my_object     -     @473      
+#   value    integral      8     'h6c      
+#   data     sa(integral)  1     -         
+#     [0]    integral      8     'h2f      
+#     [1]    integral      8     'h40      
+#     [2]    integral      8     'h2       
+#     [3]    integral      8     'h7       
+#     [4]    integral      8     'hfd      
+#   addr     integral      32    'h240b913b
+# -----------------------------------------
+# bytes are '{253, 7, 2, 64, 47}
+# bytes are '{108, 253, 7, 2, 64, 47, 36, 11, 145, 59}
+# UVM_INFO goex.sv(42) @ 0: uvm_test_top [test] pack bitdata='{0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1}
+# UVM_INFO goex.sv(43) @ 0: uvm_test_top [test] pack bytedata='{108, 253, 7, 2, 64, 47, 36, 11, 145, 59}
+# UVM_INFO goex.sv(44) @ 0: uvm_test_top [test] pack intdata='{1828521730, 1076831243, 2436562944}
+# UVM_INFO goex.sv(48) @ 0: uvm_test_top [test] unpack bitdata='{0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1}
+# UVM_INFO goex.sv(49) @ 0: uvm_test_top [test] unpack bytedata='{108, 253, 7, 2, 64, 47, 36, 11, 145, 59}
+# UVM_INFO goex.sv(50) @ 0: uvm_test_top [test] unpack intdata='{1828521730, 1076831243, 2436562944}
 # 
 # --- UVM Report Summary ---
 # 
@@ -72,8 +84,8 @@
 # ** Report counts by id
 # [Questa UVM]     2
 # [RNTST]     1
-# [uvm_test_top]     6
+# [test]     6
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 0 ns  Iteration: 215  Instance: /one
-# End time: 07:19:52 on Oct 26,2022, Elapsed time: 0:00:04
+# End time: 01:04:48 on Oct 27,2022, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 7

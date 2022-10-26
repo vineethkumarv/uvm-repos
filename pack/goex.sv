@@ -4,12 +4,13 @@ import uvm_pkg::*;
 
 class my_object extends uvm_object;
   rand bit [7:0]value;
-  rand byte  data[4:0];
+  rand byte unsigned data[4:0];
   rand int  addr;
   rand byte data1[4];
   `uvm_object_utils_begin(my_object)
   `uvm_field_int(value,UVM_ALL_ON)
   `uvm_field_sarray_int(data,UVM_DEFAULT)
+  //`uvm_field_sarray_int(data1,UVM_DEFAULT)
   `uvm_field_int(addr,UVM_DEFAULT)
   `uvm_object_utils_end
 
@@ -34,11 +35,19 @@ class test extends uvm_test;
   obj.randomize();
  obj.print();
   obj.pack(bits);
+  $display("bytes are %p",obj.data);
   obj.pack_bytes(bytes);
   obj.pack_ints(ints);
-  //`uvm_info(get_type_name(),$sformatf("pack bitdata=%p",bits),UVM_LOW);
+  $display("bytes are %p",bytes);
+  `uvm_info(get_type_name(),$sformatf("pack bitdata=%p",bits),UVM_LOW);
   `uvm_info(get_type_name(),$sformatf("pack bytedata=%p",bytes),UVM_LOW);
   `uvm_info(get_type_name(),$sformatf("pack intdata=%p",ints),UVM_LOW);
+  obj.unpack(bits);
+  obj.unpack_bytes(bytes);
+  obj.unpack_ints(ints);
+  `uvm_info(get_type_name(),$sformatf("unpack bitdata=%p",bits),UVM_LOW);
+  `uvm_info(get_type_name(),$sformatf("unpack bytedata=%p",bytes),UVM_LOW);
+  `uvm_info(get_type_name(),$sformatf("unpack intdata=%p",ints),UVM_LOW);
 endfunction
 endclass
 
