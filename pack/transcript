@@ -1,13 +1,13 @@
 # vsim one -c -do "run;exit;" 
-# Start time: 01:04:45 on Oct 27,2022
+# Start time: 01:52:02 on Oct 27,2022
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: goex.sv(35): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
-# ** Warning: goex.sv(37): (vopt-2240) Treating stand-alone use of function 'pack' as an implicit VOID cast.
-# ** Warning: goex.sv(39): (vopt-2240) Treating stand-alone use of function 'pack_bytes' as an implicit VOID cast.
-# ** Warning: goex.sv(40): (vopt-2240) Treating stand-alone use of function 'pack_ints' as an implicit VOID cast.
-# ** Warning: goex.sv(45): (vopt-2240) Treating stand-alone use of function 'unpack' as an implicit VOID cast.
-# ** Warning: goex.sv(46): (vopt-2240) Treating stand-alone use of function 'unpack_bytes' as an implicit VOID cast.
-# ** Warning: goex.sv(47): (vopt-2240) Treating stand-alone use of function 'unpack_ints' as an implicit VOID cast.
+# ** Warning: goex.sv(32): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: goex.sv(35): (vopt-2240) Treating stand-alone use of function 'pack' as an implicit VOID cast.
+# ** Warning: goex.sv(36): (vopt-2240) Treating stand-alone use of function 'pack_bytes' as an implicit VOID cast.
+# ** Warning: goex.sv(38): (vopt-2240) Treating stand-alone use of function 'pack_ints' as an implicit VOID cast.
+# ** Warning: goex.sv(43): (vopt-2240) Treating stand-alone use of function 'unpack' as an implicit VOID cast.
+# ** Warning: goex.sv(44): (vopt-2240) Treating stand-alone use of function 'unpack_bytes' as an implicit VOID cast.
+# ** Warning: goex.sv(45): (vopt-2240) Treating stand-alone use of function 'unpack_ints' as an implicit VOID cast.
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
 # //
@@ -65,14 +65,15 @@
 #     [4]    integral      8     'hfd      
 #   addr     integral      32    'h240b913b
 # -----------------------------------------
-# bytes are '{253, 7, 2, 64, 47}
-# bytes are '{108, 253, 7, 2, 64, 47, 36, 11, 145, 59}
-# UVM_INFO goex.sv(42) @ 0: uvm_test_top [test] pack bitdata='{0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1}
-# UVM_INFO goex.sv(43) @ 0: uvm_test_top [test] pack bytedata='{108, 253, 7, 2, 64, 47, 36, 11, 145, 59}
-# UVM_INFO goex.sv(44) @ 0: uvm_test_top [test] pack intdata='{1828521730, 1076831243, 2436562944}
-# UVM_INFO goex.sv(48) @ 0: uvm_test_top [test] unpack bitdata='{0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1}
-# UVM_INFO goex.sv(49) @ 0: uvm_test_top [test] unpack bytedata='{108, 253, 7, 2, 64, 47, 36, 11, 145, 59}
-# UVM_INFO goex.sv(50) @ 0: uvm_test_top [test] unpack intdata='{1828521730, 1076831243, 2436562944}
+# before pack values of byte are '{253, 7, 2, 64, 47} and stream bytes is '{}
+# after pack values of byte are '{253, 7, 2, 64, 47} and stream bytes is '{108, 253, 7, 2, 64, 47, 36, 11, 145, 59}
+# UVM_INFO goex.sv(39) @ 0: uvm_test_top [test] pack bitdata='{0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1}
+# UVM_INFO goex.sv(40) @ 0: uvm_test_top [test] pack bytedata='{108, 253, 7, 2, 64, 47, 36, 11, 145, 59}
+# UVM_INFO goex.sv(41) @ 0: uvm_test_top [test] pack intdata='{1828521730, 1076831243, 2436562944}
+# ----------------------------------------------------------
+# UVM_INFO goex.sv(46) @ 0: uvm_test_top [test] unpack bitdata='{0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1}
+# UVM_INFO goex.sv(47) @ 0: uvm_test_top [test] unpack bytedata='{108, 253, 7, 2, 64, 47, 36, 11, 145, 59}
+# UVM_INFO goex.sv(48) @ 0: uvm_test_top [test] unpack intdata='{1828521730, 1076831243, 2436562944}
 # 
 # --- UVM Report Summary ---
 # 
@@ -87,5 +88,5 @@
 # [test]     6
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 0 ns  Iteration: 215  Instance: /one
-# End time: 01:04:48 on Oct 27,2022, Elapsed time: 0:00:03
+# End time: 01:52:05 on Oct 27,2022, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 7
