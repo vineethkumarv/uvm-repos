@@ -1,0 +1,79 @@
+# vsim one -c -do "run;exit;" 
+# Start time: 07:19:48 on Oct 26,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: packp.sv(35): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: packp.sv(36): (vopt-2240) Treating stand-alone use of function 'pack_ints' as an implicit VOID cast.
+# ** Warning: packp.sv(37): (vopt-2240) Treating stand-alone use of function 'pack' as an implicit VOID cast.
+# ** Warning: packp.sv(38): (vopt-2240) Treating stand-alone use of function 'pack_bytes' as an implicit VOID cast.
+# ** Warning: packp.sv(46): (vopt-2240) Treating stand-alone use of function 'unpack_ints' as an implicit VOID cast.
+# ** Warning: packp.sv(48): (vopt-2240) Treating stand-alone use of function 'unpack' as an implicit VOID cast.
+# ** Warning: packp.sv(50): (vopt-2240) Treating stand-alone use of function 'unpack_bytes' as an implicit VOID cast.
+# //  Questa Sim
+# //  Version 10.6c linux Jul 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.packp_sv_unit(fast)
+# Loading work.one(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
+# run
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test test...
+# UVM_INFO packp.sv(40) @ 0: uvm_test_top [uvm_test_top] pack bitdata='{1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0}
+# UVM_INFO packp.sv(41) @ 0: uvm_test_top [uvm_test_top] pack intdata='{4097588696, 1790967808}
+# UVM_INFO packp.sv(42) @ 0: uvm_test_top [uvm_test_top] pack bytedata='{244, 60, 61, 216, 106, 192}
+# size is intdata is 2 and value is -197378600
+# size is bitdata is 43 and values are 3
+# size is bytedata is 6 and value is 86
+# UVM_INFO packp.sv(47) @ 0: uvm_test_top [uvm_test_top] unpack intdata='{4097588696, 1790967808}
+# UVM_INFO packp.sv(49) @ 0: uvm_test_top [uvm_test_top] unpack bitdata='{1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0}
+# UVM_INFO packp.sv(51) @ 0: uvm_test_top [uvm_test_top] unpack bytedata='{244, 60, 61, 216, 106, 192}
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    9
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [uvm_test_top]     6
+# ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 0 ns  Iteration: 215  Instance: /one
+# End time: 07:19:52 on Oct 26,2022, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 7
