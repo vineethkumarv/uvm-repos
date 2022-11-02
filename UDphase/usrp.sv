@@ -22,6 +22,10 @@ class a_phase extends uvm_topdown_phase;
   return p_inst;
  endfunction
 
+ virtual function void exec_func(uvm_component comp,uvm_phase phase);
+ $display("hi in %s ",get_type_name()); 
+
+ endfunction
 endclass
 
 class test extends uvm_test;
@@ -29,14 +33,14 @@ class test extends uvm_test;
   virtual function void add_phase();
   uvm_domain ud=uvm_domain::get_common_domain();
   //uvm_domain ud=uvm_domain::get_uvm_domain();//to insert bw run_phase
-  uvm_phase a_phase=ud.find(uvm_build_phase::get());//inserted after build phase
+  uvm_phase ap=ud.find(uvm_build_phase::get());//inserted after build phase
   ud.add(a_phase::get());
  endfunction
 
  function new(string n="test",uvm_component p=null);
   super.new(n,p);
  endfunction
- virtual function build_phase(uvm_phase phase);
+ virtual function void build_phase(uvm_phase phase);
   add_phase();
   `uvm_info("group",$sformatf("in %s phase",phase.get_name()),UVM_MEDIUM);
  endfunction
