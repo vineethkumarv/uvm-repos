@@ -1,5 +1,5 @@
 # vsim one -c -do "run;exit;" "+UVM_NO_RELNOTES" 
-# Start time: 02:09:23 on Nov 03,2022
+# Start time: 05:01:14 on Nov 03,2022
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
@@ -17,7 +17,7 @@
 # //
 # Loading sv_std.std
 # Loading mtiUvm.uvm_pkg
-# Loading work.forwiki_sv_unit(fast)
+# Loading work.phc_sv_unit(fast)
 # Loading work.one(fast)
 # Loading mtiUvm.questa_uvm_pkg(fast)
 # Loading /tools/mentor/questasim_10.6c/questasim/uvm-1.1d/linux/uvm_dpi.so
@@ -31,26 +31,21 @@
 # ----------------------------------------------------------------
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
-# UVM_INFO @ 0: reporter [RNTST] Running test test...
-# UVM_INFO forwiki.sv(45) @ 0: uvm_test_top [test] in build phase
-# UVM_INFO forwiki.sv(24) @ 0: reporter [user_defined_phase] in u_phase
-# UVM_INFO forwiki.sv(24) @ 0: reporter [user_defined_phase] in u_phase
-# UVM_INFO forwiki.sv(49) @ 0: uvm_test_top [test] in connect phase
-# UVM_INFO forwiki.sv(36) @ 0: uvm_test_top [test] in run phase
+# UVM_INFO @ 0: reporter [RNTST] Running test env...
+# hi
+# hi
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :    8
+# UVM_INFO :    3
 # UVM_WARNING :    0
 # UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
 # [Questa UVM]     2
 # [RNTST]     1
-# [test]     3
-# [user_defined_phase]     2
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 0 ns  Iteration: 223  Instance: /one
-# End time: 02:09:26 on Nov 03,2022, Elapsed time: 0:00:03
+#    Time: 0 ns  Iteration: 224  Instance: /one
+# End time: 05:01:17 on Nov 03,2022, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0
