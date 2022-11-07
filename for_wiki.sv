@@ -24,9 +24,9 @@ class environ extends uvm_env;
   //$display (uvm_resource_db#(int)::read_by_type("top.env",d));
   $display(" the value of 'a'(num1) retrieved is %0d",a);
   $display(" the value of 'b'(num2) retrieved is %0d",b);
-  $display(" the value of 'c'(num4) retrieved is %0d",c);
+  $display(" the value of 'c' retrieved via read_by_type is %0d",c);
   //$display(" the value of 'c'(num4) retrieved is %0d",d);
-  $display(" the value of 'b'(num2) retrieved is %0d",b1);
+  $display(" the value of 'b'(num3) retrieved is %0d",b1);
   endfunction
 endclass
 class test extends uvm_test;
