@@ -48,7 +48,7 @@ function new(string n="environ",uvm_component p=null);
  // uvm_resource_db#(int)::write_by_name("top.env","num4",143);//shows error
   uvm_resource_db#(int)::write_by_name("top.env","num2",140);
   uvm_resource_db#(int)::write_by_name("top.env","num3",100);
-  //uvm_resource_db#(int)::write_by_type("top.env",146);
+  uvm_resource_db#(int)::write_by_type("top.env",146);
   //uvm_resource_db#(int)::write_by_type("top.env",79); multiple values cannot be put
   uvm_resource_db#(int)::dump();
   
