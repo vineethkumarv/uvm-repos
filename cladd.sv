@@ -70,8 +70,7 @@ class d_add extends uvm_driver#(seqi_add);
       //phase.drop_objection(this);
       //si.randomize();
       seq_item_port.item_done();
-      //#1;
-    end
+      end
     else 
     begin
       //repeat (5) begin
