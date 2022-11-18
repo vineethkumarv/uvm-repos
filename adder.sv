@@ -24,7 +24,7 @@ class seq extends uvm_sequence#(seqi_add);
   endfunction
   virtual task body();
   si=seqi_add::type_id::create("si");
-  repeat (5) begin
+  repeat (15) begin
   start_item(si);
   si.randomize();
   finish_item(si);
@@ -98,7 +98,7 @@ class mon extends uvm_monitor();
    super.run_phase(phase);
    forever begin
      repeat (3) begin
-   #2; 
+   #1; 
    phase.raise_objection(this);
     si.a = vintf.a;
     si.b = vintf.b;
@@ -226,11 +226,6 @@ interface a_intf;
 endinterface 
 
 module f_add(a_intf a_f);                                                                              
-/*input bit [3:0]a;                                                                                   
-input bit [3:0]b;                                                                                   
-output bit [3:0]s;                                                                                  
-output bit c;  */    
-//a_f.c=a_f.a[0]+a_f.b[0];
 wire w1,w2,w3;
 b_add b_a(.A(a_f.a[0]),.B(a_f.b[0]),.S(a_f.s[0]),.C(w1),.c(a_f.c0)); 
 b_add b_a0(.A(a_f.a[1]),.B(a_f.b[1]),.S(a_f.s[1]),.C(w2),.c(w1)); 
@@ -238,19 +233,6 @@ b_add b_a1(.A(a_f.a[2]),.B(a_f.b[2]),.S(a_f.s[2]),.C(w3),.c(w2));
 b_add b_a2(.A(a_f.a[3]),.B(a_f.b[3]),.S(a_f.s[3]),.C(a_f.c1),.c(w3)); 
 //b_add b_a3(.A(),.B(),.S(a_f.s[4]),.C(),.c()); 
 assign a_f.s[4] = a_f.c1;
-//typedef b_add b_a;
-/*initial begin                                                                                        
-for(int i=0;i<=3;i++) begin     
-    if (i==0) begin
-      a_f.c = a_f.a[0] & a_f.b[0];
-    end
-    else if(i==3) begin
-      a_f.s[4]=a_f.c;
-    end
-  b_a(.A(a_f.a[i]),.B(a_f.b[i]),.S(a_f.s[i]),.C(a_f.c)); 
-  end                                                                                               
-  //$display("sum is %0d and carry is %0b",a_f.s,a_f.c);                                                      
-  end*/
 endmodule                                                                                           
 
 module b_add(A,B,c,S,C);                                                                              

@@ -1,6 +1,7 @@
 # vsim one -c -do "run -all;exit;" 
-# Start time: 03:27:53 on Nov 18,2022
+# Start time: 21:52:56 on Nov 18,2022
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: usemon.sv(29): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
 # //  Questa Sim
 # //  Version 10.6c linux Jul 25 2017
 # //
@@ -17,7 +18,7 @@
 # //
 # Loading sv_std.std
 # Loading mtiUvm.uvm_pkg
-# Loading work.mons_sv_unit(fast)
+# Loading work.usemon_sv_unit(fast)
 # Loading work.one(fast)
 # Loading work.b_add(fast)
 # Loading mtiUvm.questa_uvm_pkg(fast)
@@ -47,112 +48,120 @@
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
 # UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
 # UVM_INFO @ 0: reporter [RNTST] Running test test...
-# :)UVM_INFO mons.sv(136) @ 1: uvm_test_top.en.sb [araala] from Monitor a:0 , b:0 and y : 0
+# UVM_INFO usemon.sv(76) @ 0: uvm_test_top.en.age.d [araala] from Driver a:6 , b:4 and y : 0
+# :)UVM_INFO usemon.sv(185) @ 1: uvm_test_top.en.sb [araala] from Monitor_2 a:0 , b:0 and y : 10
+# :)UVM_INFO usemon.sv(178) @ 1: uvm_test_top.en.sb [araala] from Monitor_1 a:6 , b:4 and y : 10
 # ---------------------------
 # Name  Type      Size  Value
 # ---------------------------
-# si    seqi_add  -     @664 
-#   a   integral  4     'h0  
-#   b   integral  4     'h0  
-#   y   integral  5     'h0  
-# ---------------------------
-# UVM_INFO mons.sv(74) @ 1: uvm_test_top.en.age.d [araala] from Driver a:6 , b:4 and y : 0
-# :)UVM_INFO mons.sv(136) @ 2: uvm_test_top.en.sb [araala] from Monitor a:6 , b:4 and y : 10
-# ---------------------------
-# Name  Type      Size  Value
-# ---------------------------
-# si    seqi_add  -     @664 
+# si    seqi_add  -     @700 
 #   a   integral  4     'h6  
 #   b   integral  4     'h4  
 #   y   integral  5     'ha  
 # ---------------------------
-# UVM_INFO mons.sv(74) @ 2: uvm_test_top.en.age.d [araala] from Driver a:14 , b:12 and y : 0
-# :)UVM_INFO mons.sv(136) @ 3: uvm_test_top.en.sb [araala] from Monitor a:14 , b:12 and y : 16
+# UVM_INFO usemon.sv(76) @ 1: uvm_test_top.en.age.d [araala] from Driver a:14 , b:12 and y : 10
+# UVM_INFO usemon.sv(195) @ 2: uvm_test_top.en.sb [araala] TEST PASSED values are : a:6 b:4 y:10
+# :)UVM_INFO usemon.sv(178) @ 3: uvm_test_top.en.sb [araala] from Monitor_1 a:14 , b:12 and y : 26
 # ---------------------------
 # Name  Type      Size  Value
 # ---------------------------
-# si    seqi_add  -     @664 
+# si    seqi_add  -     @700 
 #   a   integral  4     'he  
 #   b   integral  4     'hc  
+#   y   integral  5     'h1a 
+# ---------------------------
+# :)UVM_INFO usemon.sv(185) @ 3: uvm_test_top.en.sb [araala] from Monitor_2 a:0 , b:0 and y : 26
+# UVM_INFO usemon.sv(76) @ 3: uvm_test_top.en.age.d [araala] from Driver a:0 , b:9 and y : 26
+# UVM_INFO usemon.sv(195) @ 4: uvm_test_top.en.sb [araala] TEST PASSED values are : a:14 b:12 y:26
+# :)UVM_INFO usemon.sv(185) @ 5: uvm_test_top.en.sb [araala] from Monitor_2 a:0 , b:0 and y : 9
+# :)UVM_INFO usemon.sv(178) @ 5: uvm_test_top.en.sb [araala] from Monitor_1 a:0 , b:9 and y : 9
+# ---------------------------
+# Name  Type      Size  Value
+# ---------------------------
+# si    seqi_add  -     @700 
+#   a   integral  4     'h0  
+#   b   integral  4     'h9  
+#   y   integral  5     'h9  
+# ---------------------------
+# UVM_INFO usemon.sv(76) @ 5: uvm_test_top.en.age.d [araala] from Driver a:2 , b:15 and y : 9
+# UVM_INFO usemon.sv(195) @ 6: uvm_test_top.en.sb [araala] TEST PASSED values are : a:0 b:9 y:9
+# :)UVM_INFO usemon.sv(178) @ 7: uvm_test_top.en.sb [araala] from Monitor_1 a:2 , b:15 and y : 17
+# ---------------------------
+# Name  Type      Size  Value
+# ---------------------------
+# si    seqi_add  -     @700 
+#   a   integral  4     'h2  
+#   b   integral  4     'hf  
+#   y   integral  5     'h11 
+# ---------------------------
+# :)UVM_INFO usemon.sv(185) @ 7: uvm_test_top.en.sb [araala] from Monitor_2 a:0 , b:0 and y : 17
+# UVM_INFO usemon.sv(76) @ 7: uvm_test_top.en.age.d [araala] from Driver a:11 , b:5 and y : 17
+# UVM_INFO usemon.sv(195) @ 8: uvm_test_top.en.sb [araala] TEST PASSED values are : a:2 b:15 y:17
+# :)UVM_INFO usemon.sv(185) @ 9: uvm_test_top.en.sb [araala] from Monitor_2 a:0 , b:0 and y : 16
+# :)UVM_INFO usemon.sv(178) @ 9: uvm_test_top.en.sb [araala] from Monitor_1 a:11 , b:5 and y : 16
+# ---------------------------
+# Name  Type      Size  Value
+# ---------------------------
+# si    seqi_add  -     @700 
+#   a   integral  4     'hb  
+#   b   integral  4     'h5  
 #   y   integral  5     'h10 
 # ---------------------------
-# UVM_INFO mons.sv(65) @ 3: uvm_test_top.en.age.d [araala] from Driver a:0 , b:0 and y : 16
-# :)UVM_INFO mons.sv(136) @ 4: uvm_test_top.en.sb [araala] from Monitor a:0 , b:0 and y : 0
+# UVM_INFO usemon.sv(76) @ 9: uvm_test_top.en.age.d [araala] from Driver a:3 , b:1 and y : 16
+# UVM_INFO usemon.sv(195) @ 10: uvm_test_top.en.sb [araala] TEST PASSED values are : a:11 b:5 y:16
+# :)UVM_INFO usemon.sv(178) @ 11: uvm_test_top.en.sb [araala] from Monitor_1 a:3 , b:1 and y : 4
 # ---------------------------
 # Name  Type      Size  Value
 # ---------------------------
-# si    seqi_add  -     @664 
-#   a   integral  4     'h0  
-#   b   integral  4     'h0  
-#   y   integral  5     'h0  
-# ---------------------------
-# UVM_INFO mons.sv(65) @ 4: uvm_test_top.en.age.d [araala] from Driver a:0 , b:0 and y : 0
-# :)UVM_INFO mons.sv(136) @ 5: uvm_test_top.en.sb [araala] from Monitor a:0 , b:0 and y : 0
-# ---------------------------
-# Name  Type      Size  Value
-# ---------------------------
-# si    seqi_add  -     @664 
-#   a   integral  4     'h0  
-#   b   integral  4     'h0  
-#   y   integral  5     'h0  
-# ---------------------------
-# UVM_INFO mons.sv(65) @ 5: uvm_test_top.en.age.d [araala] from Driver a:0 , b:0 and y : 0
-# :)UVM_INFO mons.sv(136) @ 6: uvm_test_top.en.sb [araala] from Monitor a:0 , b:0 and y : 0
-# ---------------------------
-# Name  Type      Size  Value
-# ---------------------------
-# si    seqi_add  -     @664 
-#   a   integral  4     'h0  
-#   b   integral  4     'h0  
-#   y   integral  5     'h0  
-# ---------------------------
-# UVM_INFO mons.sv(74) @ 6: uvm_test_top.en.age.d [araala] from Driver a:3 , b:1 and y : 0
-# :)UVM_INFO mons.sv(136) @ 7: uvm_test_top.en.sb [araala] from Monitor a:3 , b:1 and y : 4
-# ---------------------------
-# Name  Type      Size  Value
-# ---------------------------
-# si    seqi_add  -     @664 
+# si    seqi_add  -     @700 
 #   a   integral  4     'h3  
 #   b   integral  4     'h1  
 #   y   integral  5     'h4  
 # ---------------------------
-# UVM_INFO mons.sv(74) @ 7: uvm_test_top.en.age.d [araala] from Driver a:12 , b:14 and y : 0
-# :)UVM_INFO mons.sv(136) @ 8: uvm_test_top.en.sb [araala] from Monitor a:12 , b:14 and y : 26
+# :)UVM_INFO usemon.sv(185) @ 11: uvm_test_top.en.sb [araala] from Monitor_2 a:0 , b:0 and y : 4
+# UVM_INFO usemon.sv(76) @ 11: uvm_test_top.en.age.d [araala] from Driver a:12 , b:14 and y : 4
+# UVM_INFO usemon.sv(195) @ 12: uvm_test_top.en.sb [araala] TEST PASSED values are : a:3 b:1 y:4
+# :)UVM_INFO usemon.sv(185) @ 13: uvm_test_top.en.sb [araala] from Monitor_2 a:0 , b:0 and y : 26
+# :)UVM_INFO usemon.sv(178) @ 13: uvm_test_top.en.sb [araala] from Monitor_1 a:12 , b:14 and y : 26
 # ---------------------------
 # Name  Type      Size  Value
 # ---------------------------
-# si    seqi_add  -     @664 
+# si    seqi_add  -     @700 
 #   a   integral  4     'hc  
 #   b   integral  4     'he  
 #   y   integral  5     'h1a 
 # ---------------------------
-# UVM_INFO mons.sv(74) @ 8: uvm_test_top.en.age.d [araala] from Driver a:13 , b:11 and y : 0
-# :)UVM_INFO mons.sv(136) @ 9: uvm_test_top.en.sb [araala] from Monitor a:13 , b:11 and y : 8
+# UVM_INFO usemon.sv(76) @ 13: uvm_test_top.en.age.d [araala] from Driver a:13 , b:11 and y : 26
+# UVM_INFO usemon.sv(195) @ 14: uvm_test_top.en.sb [araala] TEST PASSED values are : a:12 b:14 y:26
+# :)UVM_INFO usemon.sv(178) @ 15: uvm_test_top.en.sb [araala] from Monitor_1 a:13 , b:11 and y : 24
 # ---------------------------
 # Name  Type      Size  Value
 # ---------------------------
-# si    seqi_add  -     @664 
+# si    seqi_add  -     @700 
 #   a   integral  4     'hd  
 #   b   integral  4     'hb  
-#   y   integral  5     'h8  
+#   y   integral  5     'h18 
 # ---------------------------
-# UVM_INFO mons.sv(65) @ 9: uvm_test_top.en.age.d [araala] from Driver a:0 , b:0 and y : 8
-# :)UVM_INFO mons.sv(136) @ 10: uvm_test_top.en.sb [araala] from Monitor a:0 , b:0 and y : 0
+# :)UVM_INFO usemon.sv(185) @ 15: uvm_test_top.en.sb [araala] from Monitor_2 a:0 , b:0 and y : 24
+# UVM_INFO usemon.sv(76) @ 15: uvm_test_top.en.age.d [araala] from Driver a:1 , b:1 and y : 24
+# UVM_INFO usemon.sv(195) @ 16: uvm_test_top.en.sb [araala] TEST PASSED values are : a:13 b:11 y:24
+# :)UVM_INFO usemon.sv(185) @ 17: uvm_test_top.en.sb [araala] from Monitor_2 a:0 , b:0 and y : 2
+# :)UVM_INFO usemon.sv(178) @ 17: uvm_test_top.en.sb [araala] from Monitor_1 a:1 , b:1 and y : 2
 # ---------------------------
 # Name  Type      Size  Value
 # ---------------------------
-# si    seqi_add  -     @664 
-#   a   integral  4     'h0  
-#   b   integral  4     'h0  
-#   y   integral  5     'h0  
+# si    seqi_add  -     @700 
+#   a   integral  4     'h1  
+#   b   integral  4     'h1  
+#   y   integral  5     'h2  
 # ---------------------------
-# UVM_INFO mons.sv(65) @ 10: uvm_test_top.en.age.d [araala] from Driver a:0 , b:0 and y : 0
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 10: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO usemon.sv(76) @ 17: uvm_test_top.en.age.d [araala] from Driver a:8 , b:7 and y : 2
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 17: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :   24
+# UVM_INFO :   40
 # UVM_WARNING :    0
 # UVM_ERROR :    0
 # UVM_FATAL :    0
@@ -160,8 +169,8 @@
 # [Questa UVM]     2
 # [RNTST]     1
 # [TEST_DONE]     1
-# [araala]    20
+# [araala]    36
 # ** Note: $finish    : /tools/mentor/questasim_10.6c/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 10 ns  Iteration: 64  Instance: /one
-# End time: 03:27:57 on Nov 18,2022, Elapsed time: 0:00:04
-# Errors: 0, Warnings: 0
+#    Time: 17 ns  Iteration: 64  Instance: /one
+# End time: 21:52:59 on Nov 18,2022, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 1

@@ -62,6 +62,7 @@ class d_add extends uvm_driver#(seqi_add);
       seq_item_port.get_next_item(si);
       vintf.a=0;
       vintf.b=0;
+      vintf.s=0;
       `uvm_info("araala",$sformatf("from Driver a:%0d , b:%0d and y : %0d",vintf.a,vintf.b,vintf.s), UVM_NONE)
       seq_item_port.item_done();
     end
@@ -179,13 +180,6 @@ class environ extends uvm_env;
 
 endfunction
 
-/*virtual task run_phase(uvm_phase phase);
-super.run_phase(phase);
-phase.raise_objection(this);
-//sequ.start(age.sr);
-phase.drop_objection(this);
-  endtask*/
-
  virtual function void connect_phase(uvm_phase phase);
  super.connect_phase(phase);
  age.m.a_port.connect(sb.b_port);
@@ -228,11 +222,11 @@ endinterface
 
 module f_add(a_intf a_f);                                                                              
 wire w1,w2,w3;
+
 b_add b_a(.A(a_f.a[0]),.B(a_f.b[0]),.S(a_f.s[0]),.C(w1),.c(a_f.c0)); 
 b_add b_a0(.A(a_f.a[1]),.B(a_f.b[1]),.S(a_f.s[1]),.C(w2),.c(w1)); 
 b_add b_a1(.A(a_f.a[2]),.B(a_f.b[2]),.S(a_f.s[2]),.C(w3),.c(w2)); 
 b_add b_a2(.A(a_f.a[3]),.B(a_f.b[3]),.S(a_f.s[3]),.C(a_f.c1),.c(w3)); 
-//b_add b_a3(.A(),.B(),.S(a_f.s[4]),.C(),.c()); 
 assign a_f.s[4] = a_f.c1;
 endmodule                                                                                           
 
