@@ -68,7 +68,7 @@ class d_add extends uvm_driver#(seqi_add);
       vintf.b=0;
       `uvm_info("araala",$sformatf("from Driver a:%0d , b:%0d and y : %0d",vintf.a,vintf.b,vintf.s), UVM_NONE)
       //phase.drop_objection(this);
-      si.randomize();
+      //si.randomize();
       seq_item_port.item_done();
       //#1;
     end
